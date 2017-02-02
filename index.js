@@ -39,11 +39,11 @@ const FB_APP_SECRET = process.env.FB_APP_SECRET;
 if (!FB_APP_SECRET) { throw new Error('missing FB_APP_SECRET') }
 
 let FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN;
-/*crypto.randomBytes(8, (err, buff) => {
+crypto.randomBytes(8, (err, buff) => {
   if (err) throw err;
   FB_VERIFY_TOKEN = buff.toString('hex');
   console.log(`/webhook will accept the Verify Token "${FB_VERIFY_TOKEN}"`);
-});*/
+});
 
 // ----------------------------------------------------------------------------
 // Messenger API specific code
@@ -141,7 +141,7 @@ app.use(({method, url}, rsp, next) => {
   });
   next();
 });
-//app.use(bodyParser.json({ verify: verifyRequestSignature }));
+app.use(bodyParser.json({ verify: verifyRequestSignature }));
 
 // Webhook setup
 app.get('/webhook', (req, res) => {
