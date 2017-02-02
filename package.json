@@ -1,5 +1,5 @@
 { 
-"name": "Thai Language FB Bot", 
+"name": "ThaiFBBot", 
 "version": "1.0.0", 
 "description": "Bot for thai language on FB",     
 "node-wit" : "4.2.0", 
