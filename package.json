@@ -12,9 +12,13 @@
     "automation"
   ],
   "main": "index.js",
-  "scripts": {
+  "scripts": { 
+   "start": "node index.js" 
+   },  
+
+  /*"scripts": {
     "test": "mocha ./tests/lib.js"
-  },
+  },*/
   "repository": "https://github.com/wit-ai/node-wit",
   "author": "The Wit Team <help@wit.ai>",
   "dependencies": {
