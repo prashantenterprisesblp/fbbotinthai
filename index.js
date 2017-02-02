@@ -21,14 +21,10 @@ const request = require('request');
 
 let Wit = null;
 let log = null;
-try {
-  // if running from repo
-  Wit = require('../').Wit;
-  log = require('../').log;
-} catch (e) {
+
   Wit = require('node-wit').Wit;
   log = require('node-wit').log;
-}
+
 
 // Webserver parameter
 const PORT = process.env.PORT || 8445;
